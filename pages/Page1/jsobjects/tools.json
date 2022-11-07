@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "tools",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgrouping: (arr, tag,emptyTXT) => {\n\t\t//funcion que recibe\n\t\t// arr = Array a ser totalizado\n\t\t// tag = campo que se va a totalizar\n\t\t// emptyTXT = Texto a mostrar cuando haya valores vacíos.\n\t\t//--\t\t\n\t\t//let data = get1stConsByDate.data.citas.map( item=>({\n\t\tlet data = arr.map( item=>({\t\n\t\t\t//source:item[\"historias.procedencias.name\"],\n\t\t\tsource:item[tag],\n\t\t}) )\t\n\t\t//Creo un nuevo array solo con lo que está en source\n\t\tconst unique_sources = [...new Set(data.map(item => item.source))];\n\n\t\tlet results = [];\n\t\t//return unique_audiences;\n\t\tunique_sources.forEach((source) => {\n\t\t\tlet result = {\n\n\t\t\t\tx: source != \"\"? source : emptyTXT,\n\t\t\t\ty: data.filter (item => item.source == source).length\n\n\t\t\t};\n\n\t\t\tresults.push(result);\n\t\t});\n\n\t\treturn results;\n\t},\n\t//Termina Funcion 1\n\tgetDoctors: () => {\n\t\tlet doctors = [\n  {\n    \"label\": \"All\",\n    \"value\": 0\n  },\n  {\n    \"label\": \"Dr. Fatemi\",\n    \"value\": 3\n  },\n  {\n    \"label\": \"Dr. Laura Melado\",\n    \"value\": 4\n  },\n  {\n    \"label\": \"Dr. Barbara Lawrenz\",\n    \"value\": 5\n  },\n  {\n    \"label\": \"Dr. Carol Coughlan\",\n    \"value\": 6\n  },\n  {\n    \"label\": \"Dr. Raquel Loja\",\n    \"value\": 7\n  },\n  {\n    \"label\": \"Dr. Francisco Ruiz\",\n    \"value\": 8\n  },\n  {\n    \"label\": \"Dr. Baris Ata\",\n    \"value\": 9\n  }\n]\n\t\treturn doctors;\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Page1_tools",
+  "deleted": false,
+  "gitSyncId": "6368c9744bf5425741071baa_6368caf74bf5425741071bbe"
+}
